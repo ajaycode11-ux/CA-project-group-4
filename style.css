@@ -9,7 +9,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: image();
+    background: url(image.JPG);
 }
 .container{
     width: 100%;
@@ -20,11 +20,11 @@ body{
 .jobpost-form{
     width: 380px;
     padding: 40px;
-    background: rgb(255,255,255,0.08);
+    background: rgba(247, 239, 239, 0.08);
     border: 2px solid;
     
     border-radius: 10px;
     backdrop-filter: blur(8px);
-    box-shadow: 0 0 20px rgb(60, 52, 128);
+    box-shadow: 0 0 20px rgb(51, 41, 145);
     color: rgb(18, 17, 17);
 }
