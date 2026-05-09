@@ -25,6 +25,6 @@ body{
     
     border-radius: 10px;
     backdrop-filter: blur(8px);
-    box-shadow: 0 0 20px blue;
+    box-shadow: 0 0 20px rgb(60, 52, 128);
     color: rgb(18, 17, 17);
 }
