@@ -1,6 +1,215 @@
-*{
-    box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #0f172a; 
+    --bg-color: #020617; 
+    --text-color: #94a3b8; 
+    --text-heading: #f8fafc; 
+    --button-color: #2563eb; 
+    --button-hover: #1d4ed8; 
+    --white: #ffffff;
+}
+
+* {
+    box-sizing: border-box; /* Ensures padding/borders don't affect element width */
     margin: 0;
     padding: 0;
-    
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    padding: 0 1rem;
+}
+
+/* Main Page Title */
+h1 {
+    text-align: center;
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin: 4rem 0 2rem;
+    color: var(--text-heading);
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+/* Decorative underline for main title */
+h1::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: var(--button-color);
+    margin: 1rem auto 0;
+    border-radius: 2px;
+}
+
+section {
+    max-width: 1200px;
+    margin: 0 auto 4rem;
+    background-color: var(--primary-color);
+    padding: 3rem 2rem;
+    border-radius: 24px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); /* Deep soft shadow for elevation */
+    border: 1px solid rgba(255, 255, 255, 0.05);      /* Subtle border for glassmorphism effect */
+}
+
+/* Category Title (e.g., "TEXTILE", "COSMETICS") */
+section h2 {
+    color: var(--text-heading);
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* CSS Grid layout for job cards (active on tablets/desktops) */
+@media (min-width: 768px) {
+    section {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* Automatically wraps and fits columns */
+        gap: 2rem;
+    }
+    /* Ensure the h2 title stretches across all grid columns */
+    section h2 {
+        grid-column: 1 / -1;
+    }
+}
+
+/* Job Card Styling */
+.vacancy, section > div {
+    background-color: var(--bg-color);
+    border-radius: 16px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column; /* Allows internal elements to stretch vertically */
+    border: 1px solid rgba(255, 255, 255, 0.02);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1.5rem; /* Fallback margin for mobile view where grid isn't active */
+}
+
+/* Remove bottom margin on desktop since Grid handles the gap */
+@media (min-width: 768px) {
+    .vacancy, section > div {
+        margin-bottom: 0;
+    }
+}
+
+/* Animated top border line */
+.vacancy::before, section > div::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--button-color);
+    transform: scaleX(0); /* Hidden by default */
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+/* Card hover effects */
+.vacancy:hover, section > div:hover {
+    transform: translateY(-10px); /* Lifts the card up */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border-color: rgba(37, 99, 235, 0.2); /* Soft blue border glow */
+}
+
+/* Trigger the top border line animation on hover */
+.vacancy:hover::before, section > div:hover::before {
+    transform: scaleX(1); /* Expands across the top */
+}
+
+/* Typography inside cards */
+.vacancy h3, section > div h3 {
+    color: var(--white);
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+/* Job Description */
+.vacancy p, section > div p {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+/* "Requirements" Subheading */
+.vacancy > h3:nth-of-type(2), section > div > h3:nth-of-type(2) {
+    font-size: 1rem;
+    color: var(--text-heading);
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Requirements List Container */
+.vacancy ul, section > div ul {
+    list-style: none;
+    margin-bottom: auto; /* Pushes the Location/Button below it to the absolute bottom of the card */
+    padding-bottom: 2rem;
+}
+
+/* Requirements List Items */
+.vacancy ul li, section > div ul li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+}
+
+/* Custom bullet points for list items */
+.vacancy ul li::before, section > div ul li::before {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    color: var(--button-color);
+    font-size: 0.8rem;
+    top: 2px;
+}
+
+/* Job Location */
+.vacancy h4, section > div h4 {
+    color: var(--text-heading);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Subtle divider line */
+}
+
+/* Button Styling */
+.vacancy button, section > div button {
+    background-color: var(--button-color);
+    border: none;
+    border-radius: 8px;
+    padding: 0;
+    width: 100%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+/* Button Hover State */
+.vacancy button:hover, section > div button:hover {
+    background-color: var(--button-hover);
+    transform: scale(1.02); /* Slight grow effect */
+}
+
+/* Apply Link (fills the button) */
+.vacancy button a, section > div button a {
+    display: block; /* Ensures the whole button is clickable, not just the text */
+    padding: 1rem 1.5rem;
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: center;
+    transition: color 0.3s ease;
 }
