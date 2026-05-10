@@ -23,9 +23,81 @@ body {
     line-height: 1.6;
     padding: 0 1rem;
 }
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    
+    
+
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.logo-img {
+    height: 35px;
+}
+
+.logo-text {
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    font-size: 28px;
+    font-weight: 1000;
+    letter-spacing: 2px;
+    color: var(--text-heading);
+}
+.logo-text::first-letter{
+    font-size: 40px;
+    
+}
+.slogan{
+    color: var(--button-color);
+    font-family: josophine;
+}
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.main-nav a:hover {
+    color: var(--text-heading);
+}
+
+.btn {
+    padding: 10px 30px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+}
+
+.btn:hover {
+    background-color: var(--button-hover);
+    transform: translateY(-1px);
+}
+
+.btn-signup {
+    background-color: var(--button-color);
+    color: var(--white);
+    font-weight: 600;
+}
 
 /* Main Page Title */
-h1 {
+.main-head {
     text-align: center;
     font-size: clamp(2rem, 5vw, 3rem);
     margin: 4rem 0 2rem;
@@ -35,7 +107,7 @@ h1 {
 }
 
 /* Decorative underline for main title */
-h1::after {
+.main-head::after {
     content: '';
     display: block;
     width: 100px;
