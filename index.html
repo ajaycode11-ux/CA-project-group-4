@@ -3,73 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EASY FIND</title>
+    <title>EASYFIND</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header>
-   <h1><span>EASY</span>FIND</h1>
-   <div class="LOGO">
-    <img src="logo.png">
-   </div>
-   <nav>
-    <ul>
-        <li>HOME</li>
-        <li>FINDING JOBS</li>
-        <li>JOB DETAILS</li>
-        <li>JOB APPLICATION FORM</li>
-        <li>EMPLOYER'S JOB LISTINGS</li>
-    </ul>
-   </nav>
-   <button class="SignUp-btn">SignUp</button>
-   </header>
-   <section class="caption">
-    <div class="caption-context">
-        <h1>Anyone, anywhere, <br> can start a business</h1>
-        <div class="entry-form"></div>
-        <input type="email" placeholder="Enter your email address">
-        <button class="start-btn">login</button>
-    <p class=""></p>
+    <!-- Main wrapper for the top part of the page -->
+    <div class="top-section">
+        <!-- Header navigation containing logo, links, and signup/login buttons -->
+        <header class="header">
+            <div class="logo-container">
+                <img src="logo.png" alt="Logo" class="logo-img">
+                <h1 class="logo-text"><span class="slogan">EASY</span>FIND</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Find Jobs</a></li>
+                    <li><a href="#">Job Details</a></li>
+                    <li><a href="#">Application Form</a></li>
+                    <li><a href="#">Job Listing</a></li>
+                    <li><a href="#">learn</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="btn btn-signup">Login</button>
+                <button class="btn btn-signup">SignUp</button>
+            </div>
+        </header>
+
+        <!-- Hero section with main headline and call-to-action form -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">Anyone ,anywhere,<br>can start a business</h1>
+                <div class="hero-form">
+                    <input type="email" class="hero-input" placeholder="Enter your email address">
+                    <button class="btn btn-start">Login</button>
+                </div>
+                <p class="hero-disclaimer">Trust EasyFind, no credit card required, By entering your email,you agreee<br>to recieve marketing emails from EasyFind</p>
+            </div>
+            <div class="hero-image">
+                <img src="pharmacutical.jpg" alt="Pharmacutical">
+            </div>
+        </section>
     </div>
-   </section>
-   <!--business section-->
-   <section class="company">
-    <div class="introduction of company">
-        <h2>Welcome to our EasyFind companies</h2>
-        <p>We create an ecommerce website backed by powerful tools that help you find employees or employers</p>
-        <p><strong>Explore more examples</strong></p>
-    </div>
-     <div 
-        class="card">
-    <img src="cathering.jpg" alt="cathering">
-    <p>Cathering</p>
-     </div>
-     <div
-     class="card">
-    <img src="teaching.jpg" alt="teaching">
-<p>Teaching</p>
-    </div>
-    <div class="card">
-        <img src="cosmetics.jpg" alt="cosmetics">
-        <p>Cosmetics</p>
-    </div>
-    <div
-    class="card">
-<img src="cleaning.jpg" alt="cleaning">
-<p>Cleaning</p>
-</div>
-<div
-class="card">
-<img src="construction.jpg" alt="construction">
-<p>construction</p>
-</div>
-<div 
-class="card">
-<img src="pharmacutical.jpg" alt="pharmacutical">
-<p>pharmacutical</p>
-</div>
-    </div>
-   </section>
+
+    <!-- Section displaying the different business categories as cards -->
+    <section class="business-section">
+        <div class="business-intro">
+            <h2 class="business-title">Welcome to our EasyFind Companies</h2>
+            <p class="business-subtitle">We create an ecommerce website backed by powerful tools that help you find Employees or Employers</p>
+            <p class="explore-link">Explore more example -</p>
+        </div>
+        
+        <!-- Container for individual business category cards -->
+        <div class="cards-container">
+            <div class="card">
+                <img src="cathering.jpg" alt="Cathering">
+                <p>Cathering</p>
+            </div>
+            <div class="card">
+                <img src="teaching.jpg" alt="Teaching">
+                <p>Teaching</p>
+            </div>
+            <div class="card">
+                <img src="cosmetics.jpg" alt="Cosmetics">
+                <p>Cosmetics</p>
+            </div>
+            <div class="card">
+                <img src="cleaning.jpg" alt="Cleaning">
+                <p>Cleaning</p>
+            </div>
+            <div class="card">
+                <img src="construction.jpg" alt="Contruction">
+                <p>Contruction</p>
+            </div>
+            <div class="card">
+                <img src="pharmacutical.jpg" alt="pharmacutical">
+            </div>
+        </div>
+    </section>
 </body>
 </html>
