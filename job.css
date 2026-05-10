@@ -9,7 +9,10 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url(image.JPG);
+    background: url(2ndpic.JPG);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .container{
     width: 100%;
@@ -25,6 +28,21 @@ body{
     
     border-radius: 10px;
     backdrop-filter: blur(8px);
-    box-shadow: 0 0 20px rgb(51, 41, 145);
-    color: rgb(18, 17, 17);
+    box-shadow: 0 0 20px rgb(88, 75, 196);
+    color: rgb(31, 29, 29);
+}
+input,textarea{
+    width: 100%;
+    padding: 4px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+
+    background: rgb(255,255,255,0.2);
+    border: 1px solid white;
+    border-radius: 11px;
+
+    color: white;
+    outline: none;
+     
+
 }
