@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #0f172a; 
+    --bg-color: #020617; 
+    --text-color: #94a3b8; 
+    --text-heading: #f8fafc; 
+    --button-color: #2563eb; 
+    --button-hover: #1d4ed8; 
+    --white: #ffffff;
+}
+
+* {
+    box-sizing: border-box; /* Ensures padding/borders don't affect element width */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    padding: 1rem;
+}
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    
+    
+
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.logo-img {
+    height: 35px;
+}
+
+.logo-text {
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    font-size: 28px;
+    font-weight: 1000;
+    letter-spacing: 2px;
+    color: var(--text-heading);
+}
+.logo-text::first-letter{
+    font-size: 40px;
+    
+}
+.slogan{
+    color: var(--button-color);
+    font-family: josophine;
+}
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.main-nav a:hover {
+    color: var(--text-heading);
+}
+
+.btn {
+    padding: 10px 30px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+}
+
+.btn:hover {
+    background-color: var(--button-hover);
+    transform: translateY(-1px);
+}
+
+.btn-signup {
+    background-color: var(--button-color);
+    color: var(--white);
+    font-weight: 600;
+}
+
+/* Main Page Title */
+.main-head {
+    text-align: center;
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin: 4rem 0 2rem;
+    color: var(--text-heading);
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+/* Decorative underline for main title */
+.main-head::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: var(--button-color);
+    margin: 1rem auto 0;
+    border-radius: 2px;
+}
+
+section {
+    max-width: 1200px;
+    margin: 0 auto 4rem;
+    background-color: var(--primary-color);
+    padding: 3rem 2rem;
+    border-radius: 24px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); /* Deep soft shadow for elevation */
+    border: 1px solid rgba(255, 255, 255, 0.05);      /* Subtle border for glassmorphism effect */
+}
+
+/* Category Title (e.g., "TEXTILE", "COSMETICS") */
+section h2 {
+    color: var(--text-heading);
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* CSS Grid layout for job cards (active on tablets/desktops) */
+@media (min-width: 768px) {
+    section {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* Automatically wraps and fits columns */
+        gap: 2rem;
+    }
+    /* Ensure the h2 title stretches across all grid columns */
+    section h2 {
+        grid-column: 1 / -1;
+    }
+}
+
+/* Job Card Styling */
+.vacancy, section > div {
+    background-color: var(--bg-color);
+    border-radius: 16px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column; /* Allows internal elements to stretch vertically */
+    border: 1px solid rgba(255, 255, 255, 0.02);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1.5rem; /* Fallback margin for mobile view where grid isn't active */
+}
+
+/* Remove bottom margin on desktop since Grid handles the gap */
+@media (min-width: 768px) {
+    .vacancy, section > div {
+        margin-bottom: 0;
+    }
+}
+
+/* Animated top border line */
+.vacancy::before, section > div::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--button-color);
+    transform: scaleX(0); /* Hidden by default */
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+/* Card hover effects */
+.vacancy:hover, section > div:hover {
+    transform: translateY(-10px); /* Lifts the card up */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border-color: rgba(37, 99, 235, 0.2); /* Soft blue border glow */
+}
+
+/* Trigger the top border line animation on hover */
+.vacancy:hover::before, section > div:hover::before {
+    transform: scaleX(1); /* Expands across the top */
+}
+
+/* Typography inside cards */
+.vacancy h3, section > div h3 {
+    color: var(--white);
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+/* Job Description */
+.vacancy p, section > div p {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+/* "Requirements" Subheading */
+.vacancy > h3:nth-of-type(2), section > div > h3:nth-of-type(2) {
+    font-size: 1rem;
+    color: var(--text-heading);
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Requirements List Container */
+.vacancy ul, section > div ul {
+    list-style: none;
+    margin-bottom: auto; /* Pushes the Location/Button below it to the absolute bottom of the card */
+    padding-bottom: 2rem;
+}
+
+/* Requirements List Items */
+.vacancy ul li, section > div ul li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+}
+
+/* Custom bullet points for list items */
+.vacancy ul li::before, section > div ul li::before {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    color: var(--button-color);
+    font-size: 0.8rem;
+    top: 2px;
+}
+
+/* Job Location */
+.vacancy h4, section > div h4 {
+    color: var(--text-heading);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Subtle divider line */
+}
+
+/* Button Styling */
+.vacancy button, section > div button {
+    background-color: var(--button-color);
+    border: none;
+    border-radius: 8px;
+    padding: 0;
+    width: 100%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+/* Button Hover State */
+.vacancy button:hover, section > div button:hover {
+    background-color: var(--button-hover);
+    transform: scale(1.02); /* Slight grow effect */
+}
+
+/* Apply Link (fills the button) */
+.vacancy button a, section > div button a {
+    display: block; /* Ensures the whole button is clickable, not just the text */
+    padding: 1rem 1.5rem;
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+/* --- PROFESSIONAL FOOTER SECTION --- */
+/* The footer uses margin-top: auto to stay at the bottom of the page */
+.footer {
+    background-color: var(--primary-color); /* Very dark background for footer, matching body */
+    color: var(--text-color);
+    padding: 80px 40px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    margin-top: auto; /* Pushes the footer down to the bottom */
+}
+
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-col .logo-container {
+    margin-bottom: 20px;
+}
+
+.footer-desc {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    max-width: 300px;
+}
+
+.footer-heading {
+    color: var(--text-heading);
+    font-size: 20px;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 15px;
+}
+
+.footer-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+.footer-links a:hover {
+    color: var(--button-color);
+    transform: translateX(5px);
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    color: var(--text-heading);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: var(--button-color);
+    color: var(--white);
+    transform: translateY(-3px);
+}
+
+.newsletter-text {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: var(--text-heading);
+}
+
+.newsletter-form {
+    display: flex;
+}
+
+.newsletter-input {
+    flex: 1;
+    padding: 12px 15px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-right: none;
+    border-radius: 6px 0 0 6px;
+    color: var(--text-heading);
+    font-family: 'Roboto', sans-serif;
+    outline: none;
+}
+
+.newsletter-input::placeholder {
+    color: #64748b;
+}
+
+.btn-newsletter {
+    background-color: var(--button-color);
+    color: var(--white);
+    padding: 12px 20px;
+    border-radius: 0 6px 6px 0;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.footer-bottom {
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 14px;
+}
