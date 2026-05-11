@@ -35,13 +35,18 @@ body {
 
 /* HEADER */
 .header {
+    position: fixed; /* Keep header fixed at the top */
+    top: 0;
+    left: 0;
+    width: 100%; /* Span full width of viewport */
+    z-index: 1000; /* Ensure header stays above other content */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
-    
-    
-
+    padding: 20px 40px; /* Add side padding for a professional layout */
+    background-color: var(--bg-color); /* Apply requested background color */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5); /* Add subtle shadow for depth */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Soft border */
 }
 
 .logo-container {
@@ -112,7 +117,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 80px 0;
+    padding: 140px 0 80px; /* Increased top padding to account for fixed header */
     gap: 40px;
 }
 
