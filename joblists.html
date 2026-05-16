@@ -3,45 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Job Listings | EASYFIND</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="joblists.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 </head>
-<!-- Main wrapper for the top part of the page -->
-    <div class="top-section">
-        <!-- Header navigation containing logo, links, and signup/login buttons -->
-        <header class="header">
-            <div class="logo-container">
-                <img src="logo.png" alt="Logo" class="logo-img">
-                <h1 class="logo-text"><span class="slogan">EASY</span>FIND</h1>
-            </div>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Find Jobs</a></li>
-                    <li><a href="#">Job Details</a></li>
-                    <li><a href="#">Application Form</a></li>
-                    <li><a href="#">Job Listing</a></li>
-                    <li><a href="#">learn</a></li>
-                </ul>
-            </nav>
-            <div class="header-actions">
-                <button class="btn btn-signup">Login</button>
-                <button class="btn btn-signup">SignUp</button>
-            </div>
-        </header>
-
-        <!-- Hero section with main headline and call-to-action form -->
-    </div>
-
-    <!-- Section displaying the different business categories as cards -->
-    <section class="business-section">
-        <div class="business-intro">
-            <h2 class="business-title">Welcome to our EasyFind job List Page</h2>
-            <p class="business-subtitle">Here you will find good job opportunity around Buea in all the categories made easy for you by EasyFind</p>
-            <p class="explore-link">Explore more example -</p>
-        </div>
 <body>
-<h1>HERE ARE THE AVAILABLE JOBS</h1>
+    <!-- Header navigation containing logo, links, and signup/login buttons -->
+    <header class="header">
+        <div class="logo-container">
+            <img src="https://ui-avatars.com/api/?name=Easy+Find&background=2563eb&color=fff&size=200&font-size=0.33" alt="Logo" class="logo-img">
+            <h1 class="logo-text"><span class="slogan">EASY</span>FIND</h1>
+        </div>
+        
+        <!-- Hamburger Menu Button -->
+        <div class="hamburger-btn">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Find Jobs</a></li>
+                <li><a href="job-deatails.html">Job Details</a></li>
+                <li><a href="#">Application Form</a></li>
+                <li><a href="joblists.html">Job Listing</a></li>
+                <li><a href="#">learn</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <button class="btn btn-signup">Login</button>
+            <button class="btn btn-signup">SignUp</button>
+        </div>
+    </header>
+
+    <section class="business-section" style="padding-top: 120px;">
+        <div class="business-intro">
+            <h2 class="business-title">Welcome to our EasyFind Job List Page</h2>
+            <p class="business-subtitle">Here you will find good job opportunities around Buea in all the categories made easy for you by EasyFind</p>
+        </div>
+        <h1 class="main-head" style="text-align: center; color: var(--text-heading); margin-bottom: 30px;">HERE ARE THE AVAILABLE JOBS</h1>
 
 <h2>CATHERING</h2>
 
@@ -326,53 +329,66 @@
         </article>
     </div>
   </div>
-</body>
-<footer class="footer">
-    <div class="footer-container">
-        <div class="footer-col">
-            <img src="" alt="" class="logo-img">
-            <div class="logo-text"><span class="slogan">EASY</span>FIND</div>
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Column 1: Company Branding and Description -->
+            <div class="footer-col">
+                <div class="logo-container">
+                    <img src="https://ui-avatars.com/api/?name=Easy+Find&background=2563eb&color=fff&size=200&font-size=0.33" alt="Logo" class="logo-img">
+                    <h2 class="logo-text"><span class="slogan">EASY</span>FIND</h2>
+                </div>
+                <p class="footer-desc">Empowering individuals and businesses to connect effortlessly. Your go-to platform for finding the right talent and opportunities.</p>
+            </div>
+            
+            <!-- Column 2: Quick Navigation Links -->
+            <div class="footer-col">
+                <h3 class="footer-heading">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Find Jobs</a></li>
+                    <li><a href="#">Post a Job</a></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+            </div>
+            
+            <!-- Column 3: Support & Policies -->
+            <div class="footer-col">
+                <h3 class="footer-heading">Support</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <!-- Column 4: Social Media & Newsletter Subscription -->
+            <div class="footer-col">
+                <h3 class="footer-heading">Connect With Us</h3>
+                <!-- Social Media Icons -->
+                <div class="social-links">
+                    <a href="#" class="social-icon">FB</a>
+                    <a href="#" class="social-icon">TW</a>
+                    <a href="#" class="social-icon">IN</a>
+                    <a href="#" class="social-icon">IG</a>
+                </div>
+                
+                <!-- Newsletter Form -->
+                <p class="newsletter-text">Subscribe to our newsletter</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Email address" class="newsletter-input">
+                    <button class="btn btn-newsletter">Subscribe</button>
+                </div>
+            </div>
         </div>
-        <p class="footer-desc">Empowering individauls and  business to connect effortlessly. Your go-to platform for finding the right talent and opportunitie</p>
-    </div>
-    <div class="footer-col">
-        <h3 class="footer-headings">Quick Links</h3>
-        <ul class="footer-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Find Jobs</a></li>
-            <li><a href="#">Post a Job</a></li>
-            <li><a href="#">About Us</a></li>
-        </ul>
-    </div>
+        
+        <!-- Bottom Section: Copyright Notice -->
+        <div class="footer-bottom">
+            <p>&copy; 2026 EasyFind. All rights reserved.</p>
+        </div>
+    </footer>
 
-     <div class="footer-col">
-        <h3 class="footer-headings">Support</h3>
-        <ul class="footer-links">
-            <li><a href="#">Help Center</a></li>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Contact Us</a></li>
-        </ul>
-    </div>
-
-     <div class="footer-col">
-        <h3 class="footer-headings">Connect with Us</h3>
-        <div class="social-links">
-            <a href="#" class="social icon">FB</a>
-            <a href="#" class="social icon">TW</a>
-            <a href="#" class="social icon">IN</a>
-            <a href="#" class="social icon">IG</a>
-    </div>
-   
-    <p class="newsletter-text">Subscribe to our newsletter</p>
-    <div class="newsletter-form">
-        <input type="email" placeholder="Emal address" class="newsletter-input">
-        <button class="btn-newsletter">Subscribe</button>
-    </div>
-  </div>
-</div>
-<div class="footer-bottom">
-    <p>&copy; 2026 EasyFind. All rights reserved</p>
-</div>
-</footer>
+    <!-- Link to JavaScript file for interactivity -->
+    <script src="script.js"></script>
+</body>
 </html>
