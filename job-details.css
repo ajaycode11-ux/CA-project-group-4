@@ -46,7 +46,7 @@ body {
 }
 
 .logo-img {
-    height: 35px;
+    height: 80px;
 }
 
 .logo-text {
@@ -283,43 +283,50 @@ section h2 {
     top: 2px;
 }
 
-/* Job Location */
-.vacancy h4, section > div h4 {
-    color: var(--text-heading);
-    font-size: 0.95rem;
+/* Job Meta Information (Location, Salary) */
+.job-meta {
     margin-bottom: 1.5rem;
     padding-top: 1rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1); /* Subtle divider line */
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
-/* Button Styling */
-.vacancy button, section > div button {
+.job-meta h4 {
+    color: var(--text-heading);
+    font-size: 0.95rem;
+    font-weight: normal;
+}
+
+.job-meta h4 strong {
+    color: var(--text-color);
+    margin-right: 5px;
+}
+
+/* Professional Apply Button */
+.btn-apply-now {
+    display: block;
     background-color: var(--button-color);
+    color: var(--white);
     border: none;
     border-radius: 8px;
-    padding: 0;
-    width: 100%;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    overflow: hidden;
-}
-
-/* Button Hover State */
-.vacancy button:hover, section > div button:hover {
-    background-color: var(--button-hover);
-    transform: scale(1.02); /* Slight grow effect */
-}
-
-/* Apply Link (fills the button) */
-.vacancy button a, section > div button a {
-    display: block; /* Ensures the whole button is clickable, not just the text */
     padding: 1rem 1.5rem;
-    color: var(--white);
+    width: 100%;
     text-decoration: none;
     font-weight: 600;
     font-size: 1rem;
     text-align: center;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
+    margin-top: auto; /* Pushes button to the very bottom */
+}
+
+.btn-apply-now:hover {
+    background-color: var(--button-hover);
+    transform: translateY(-2px); 
+    box-shadow: 0 6px 12px rgba(37, 99, 235, 0.4);
 }
 /* --- PROFESSIONAL FOOTER SECTION --- */
 /* The footer uses margin-top: auto to stay at the bottom of the page */

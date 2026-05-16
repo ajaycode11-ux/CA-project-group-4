@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job Listings | EASYFIND</title>
-    <!-- Removed joblists.css to use consistent styling from style.css for uniformity -->
+    <!-- Re-added joblists.css to utilize native color palette variables for specific elements -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="joblists.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -41,7 +42,8 @@
     </header>
 
     <!-- Switched from a custom business-section block to the standardized featured-jobs-section layout from style.css -->
-    <section class="featured-jobs-section" style="padding-top: 120px;">
+    <!-- Applied joblists-page-bg class to differ body color from the navbar -->
+    <section class="featured-jobs-section joblists-page-bg">
         
         <!-- Standardized Section Header -->
         <div class="section-header">
@@ -50,21 +52,21 @@
         </div>
 
         <!-- CATEGORY: CATERING -->
-        <div style="max-width: 1400px; margin: 0 auto;">
+        <div class="category-container">
             <!-- Added category headings to neatly separate job grids -->
-            <h3 style="color: var(--text-heading); font-size: 24px; margin-bottom: 20px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 10px;">Catering</h3>
+            <h3 class="category-heading">Catering</h3>
         </div>
         
         <!-- Utilizing the uniform jobs-grid and job-card classes -->
         <div class="jobs-grid">
             <div class="job-card">
-                <img src="./images/chef.jpg" alt="Chef Image" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                <img src="./images/chef.jpg" alt="Chef Image" class="job-img">
                 <div class="job-card-header">
                     <div>
                         <h3 class="job-title">Chef</h3>
                     </div>
                 </div>
-                <p style="color: var(--text-color); font-size: 14px; margin-bottom: 15px;">In need of a qualified Chef who prepares and cooks meals, plans menus, and ensures food quality.</p>
+                <p class="job-desc">In need of a qualified Chef who prepares and cooks meals, plans menus, and ensures food quality.</p>
                 <div class="job-tags">
                     <span class="job-tag">Full Time</span>
                     <span class="job-tag">100,000 XAF</span>
@@ -74,13 +76,13 @@
             </div>
 
             <div class="job-card">
-                <img src="./images/OIP (12).webp" alt="Caterer Assistant Image" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                <img src="./images/OIP (12).webp" alt="Caterer Assistant Image" class="job-img">
                 <div class="job-card-header">
                     <div>
                         <h3 class="job-title">Caterer Assistant</h3>
                     </div>
                 </div>
-                <p style="color: var(--text-color); font-size: 14px; margin-bottom: 15px;">Helps with food preparation and keeps the kitchen clean and organized.</p>
+                <p class="job-desc">Helps with food preparation and keeps the kitchen clean and organized.</p>
                 <div class="job-tags">
                     <span class="job-tag">Part Time</span>
                     <span class="job-tag">40,000 XAF</span>
@@ -90,13 +92,13 @@
             </div>
 
             <div class="job-card">
-                <img src="./images/Baker.jpg" alt="Baker Image" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                <img src="./images/Baker.jpg" alt="Baker Image" class="job-img">
                 <div class="job-card-header">
                     <div>
                         <h3 class="job-title">Baker</h3>
                     </div>
                 </div>
-                <p style="color: var(--text-color); font-size: 14px; margin-bottom: 15px;">A qualified Baker needed who can bake bread, cakes, pastries, and many more.</p>
+                <p class="job-desc">A qualified Baker needed who can bake bread, cakes, pastries, and many more.</p>
                 <div class="job-tags">
                     <span class="job-tag">Part Time</span>
                     <span class="job-tag">90,000 XAF</span>
@@ -107,19 +109,19 @@
         </div>
 
         <!-- CATEGORY: COSMETICS -->
-        <div style="max-width: 1400px; margin: 40px auto 0;">
-            <h3 style="color: var(--text-heading); font-size: 24px; margin-bottom: 20px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 10px;">Cosmetics</h3>
+        <div class="category-container">
+            <h3 class="category-heading">Cosmetics</h3>
         </div>
         
         <div class="jobs-grid">
             <div class="job-card">
-                <img src="./images/OIP (12).webp" alt="Beautician Image" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                <img src="./images/OIP (12).webp" alt="Beautician Image" class="job-img">
                 <div class="job-card-header">
                     <div>
                         <h3 class="job-title">Beautician</h3>
                     </div>
                 </div>
-                <p style="color: var(--text-color); font-size: 14px; margin-bottom: 15px;">A qualified beautician is needed to provide beauty services.</p>
+                <p class="job-desc">A qualified beautician is needed to provide beauty services.</p>
                 <div class="job-tags">
                     <span class="job-tag">Part Time</span>
                     <span class="job-tag">60,000 XAF</span>
@@ -129,13 +131,13 @@
             </div>
 
             <div class="job-card">
-                <img src="./images/spa thera.jpg" alt="Spa Therapist Image" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                <img src="./images/spa thera.jpg" alt="Spa Therapist Image" class="job-img">
                 <div class="job-card-header">
                     <div>
                         <h3 class="job-title">Spa Therapist</h3>
                     </div>
                 </div>
-                <p style="color: var(--text-color); font-size: 14px; margin-bottom: 15px;">In need of a qualified spa therapist to provide services to customers in a spa.</p>
+                <p class="job-desc">In need of a qualified spa therapist to provide services to customers in a spa.</p>
                 <div class="job-tags">
                     <span class="job-tag">Part Time</span>
                     <span class="job-tag">50,000 XAF</span>
@@ -145,13 +147,13 @@
             </div>
 
             <div class="job-card">
-                <img src="./images/Nail tech.jpg" alt="Nail Technician Image" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                <img src="./images/Nail tech.jpg" alt="Nail Technician Image" class="job-img">
                 <div class="job-card-header">
                     <div>
                         <h3 class="job-title">Nail Technician</h3>
                     </div>
                 </div>
-                <p style="color: var(--text-color); font-size: 14px; margin-bottom: 15px;">A qualified nail technician needed to provide nail services to customers in a salon.</p>
+                <p class="job-desc">A qualified nail technician needed to provide nail services to customers in a salon.</p>
                 <div class="job-tags">
                     <span class="job-tag">Part Time</span>
                     <span class="job-tag">50,000 XAF</span>
@@ -162,19 +164,19 @@
         </div>
 
         <!-- CATEGORY: DOMESTIC WORKER -->
-        <div style="max-width: 1400px; margin: 40px auto 0;">
-            <h3 style="color: var(--text-heading); font-size: 24px; margin-bottom: 20px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 10px;">Domestic Worker</h3>
+        <div class="category-container">
+            <h3 class="category-heading">Domestic Worker</h3>
         </div>
         
         <div class="jobs-grid">
             <div class="job-card">
-                <img src="./images/CLEANING.jpg" alt="House Keeper Image" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                <img src="./images/CLEANING.jpg" alt="House Keeper Image" class="job-img">
                 <div class="job-card-header">
                     <div>
                         <h3 class="job-title">House Keeper</h3>
                     </div>
                 </div>
-                <p style="color: var(--text-color); font-size: 14px; margin-bottom: 15px;">A qualified housekeeper needed to provide cleaning services.</p>
+                <p class="job-desc">A qualified housekeeper needed to provide cleaning services.</p>
                 <div class="job-tags">
                     <span class="job-tag">Part Time</span>
                     <span class="job-tag">40,000 XAF</span>
@@ -184,13 +186,13 @@
             </div>
 
             <div class="job-card">
-                <img src="./images/nanny.jpg" alt="Nanny Image" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                <img src="./images/nanny.jpg" alt="Nanny Image" class="job-img">
                 <div class="job-card-header">
                     <div>
                         <h3 class="job-title">Nanny</h3>
                     </div>
                 </div>
-                <p style="color: var(--text-color); font-size: 14px; margin-bottom: 15px;">A qualified Nanny needed to provide nanny services.</p>
+                <p class="job-desc">A qualified Nanny needed to provide nanny services.</p>
                 <div class="job-tags">
                     <span class="job-tag">Part Time</span>
                     <span class="job-tag">40,000 XAF</span>
@@ -200,13 +202,13 @@
             </div>
 
             <div class="job-card">
-                <img src="./images/gardener.jpg" alt="Gardener Image" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                <img src="./images/gardener.jpg" alt="Gardener Image" class="job-img">
                 <div class="job-card-header">
                     <div>
                         <h3 class="job-title">Gardener</h3>
                     </div>
                 </div>
-                <p style="color: var(--text-color); font-size: 14px; margin-bottom: 15px;">A qualified gardener needed to provide gardening and landscaping services.</p>
+                <p class="job-desc">A qualified gardener needed to provide gardening and landscaping services.</p>
                 <div class="job-tags">
                     <span class="job-tag">Part Time</span>
                     <span class="job-tag">45,000 XAF</span>
@@ -217,19 +219,19 @@
         </div>
 
         <!-- CATEGORY: CONSTRUCTION -->
-        <div style="max-width: 1400px; margin: 40px auto 0;">
-            <h3 style="color: var(--text-heading); font-size: 24px; margin-bottom: 20px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 10px;">Construction</h3>
+        <div class="category-container">
+            <h3 class="category-heading">Construction</h3>
         </div>
         
         <div class="jobs-grid">
             <div class="job-card">
-                <img src="./images/builder.jpg" alt="Builder Image" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                <img src="./images/builder.jpg" alt="Builder Image" class="job-img">
                 <div class="job-card-header">
                     <div>
                         <h3 class="job-title">Builder</h3>
                     </div>
                 </div>
-                <p style="color: var(--text-color); font-size: 14px; margin-bottom: 15px;">A qualified builder needed to construct and maintain buildings.</p>
+                <p class="job-desc">A qualified builder needed to construct and maintain buildings.</p>
                 <div class="job-tags">
                     <span class="job-tag">Part Time</span>
                     <span class="job-tag">Negotiable</span>
@@ -239,13 +241,13 @@
             </div>
 
             <div class="job-card">
-                <img src="./images/Tiler.jpg" alt="Tiling Image" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                <img src="./images/Tiler.jpg" alt="Tiling Image" class="job-img">
                 <div class="job-card-header">
                     <div>
                         <h3 class="job-title">Tiling</h3>
                     </div>
                 </div>
-                <p style="color: var(--text-color); font-size: 14px; margin-bottom: 15px;">Qualified tiler needed to construct and maintain buildings and other structures.</p>
+                <p class="job-desc">Qualified tiler needed to construct and maintain buildings and other structures.</p>
                 <div class="job-tags">
                     <span class="job-tag">Part Time</span>
                     <span class="job-tag">Negotiable</span>
@@ -255,13 +257,13 @@
             </div>
 
             <div class="job-card">
-                <img src="./images/carpenter.jpg" alt="Carpenter Image" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                <img src="./images/carpenter.jpg" alt="Carpenter Image" class="job-img">
                 <div class="job-card-header">
                     <div>
                         <h3 class="job-title">Carpenter</h3>
                     </div>
                 </div>
-                <p style="color: var(--text-color); font-size: 14px; margin-bottom: 15px;">A qualified Carpenter needed for roofing and other woodwork services.</p>
+                <p class="job-desc">A qualified Carpenter needed for roofing and other woodwork services.</p>
                 <div class="job-tags">
                     <span class="job-tag">Part Time</span>
                     <span class="job-tag">Negotiable</span>
@@ -272,19 +274,19 @@
         </div>
 
         <!-- CATEGORY: TEXTILE -->
-        <div style="max-width: 1400px; margin: 40px auto 0;">
-            <h3 style="color: var(--text-heading); font-size: 24px; margin-bottom: 20px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 10px;">Textile</h3>
+        <div class="category-container">
+            <h3 class="category-heading">Textile</h3>
         </div>
         
         <div class="jobs-grid">
             <div class="job-card">
-                <img src="./images/tailor.jpg" alt="Tailor Image" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                <img src="./images/tailor.jpg" alt="Tailor Image" class="job-img">
                 <div class="job-card-header">
                     <div>
                         <h3 class="job-title">Tailor</h3>
                     </div>
                 </div>
-                <p style="color: var(--text-color); font-size: 14px; margin-bottom: 15px;">A qualified tailor needed to create clothing for customers.</p>
+                <p class="job-desc">A qualified tailor needed to create clothing for customers.</p>
                 <div class="job-tags">
                     <span class="job-tag">Full Time</span>
                     <span class="job-tag">65,000 XAF</span>
@@ -294,13 +296,13 @@
             </div>
 
             <div class="job-card">
-                <img src="./images/seamtress.jpg" alt="Seamstress Image" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                <img src="./images/seamtress.jpg" alt="Seamstress Image" class="job-img">
                 <div class="job-card-header">
                     <div>
                         <h3 class="job-title">Seamstress</h3>
                     </div>
                 </div>
-                <p style="color: var(--text-color); font-size: 14px; margin-bottom: 15px;">Qualified seamstress needed to create and alter clothing for customers.</p>
+                <p class="job-desc">Qualified seamstress needed to create and alter clothing for customers.</p>
                 <div class="job-tags">
                     <span class="job-tag">Full Time</span>
                     <span class="job-tag">65,000 XAF</span>
@@ -310,13 +312,13 @@
             </div>
 
             <div class="job-card">
-                <img src="./images/Assistant.jpg" alt="Clothing Assistant Image" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                <img src="./images/Assistant.jpg" alt="Clothing Assistant Image" class="job-img">
                 <div class="job-card-header">
                     <div>
                         <h3 class="job-title">Clothing Assistance</h3>
                     </div>
                 </div>
-                <p style="color: var(--text-color); font-size: 14px; margin-bottom: 15px;">A qualified clothing assistant needed to assist in clothing creation.</p>
+                <p class="job-desc">A qualified clothing assistant needed to assist in clothing creation.</p>
                 <div class="job-tags">
                     <span class="job-tag">Full Time</span>
                     <span class="job-tag">65,000 XAF</span>
@@ -327,19 +329,19 @@
         </div>
 
         <!-- CATEGORY: TEACHING -->
-        <div style="max-width: 1400px; margin: 40px auto 0;">
-            <h3 style="color: var(--text-heading); font-size: 24px; margin-bottom: 20px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 10px;">Teaching</h3>
+        <div class="category-container">
+            <h3 class="category-heading">Teaching</h3>
         </div>
         
         <div class="jobs-grid">
             <div class="job-card">
-                <img src="./images/teacher s.jpg" alt="Teacher Image" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                <img src="./images/teacher s.jpg" alt="Teacher Image" class="job-img">
                 <div class="job-card-header">
                     <div>
                         <h3 class="job-title">Teacher</h3>
                     </div>
                 </div>
-                <p style="color: var(--text-color); font-size: 14px; margin-bottom: 15px;">A qualified teacher needed to teach and educate students in a primary school.</p>
+                <p class="job-desc">A qualified teacher needed to teach and educate students in a primary school.</p>
                 <div class="job-tags">
                     <span class="job-tag">Full Time</span>
                     <span class="job-tag">65,000 XAF</span>
@@ -349,13 +351,13 @@
             </div>
 
             <div class="job-card">
-                <img src="./images/lecture.jpg" alt="Lecturer Image" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                <img src="./images/lecture.jpg" alt="Lecturer Image" class="job-img">
                 <div class="job-card-header">
                     <div>
                         <h3 class="job-title">Lecturer</h3>
                     </div>
                 </div>
-                <p style="color: var(--text-color); font-size: 14px; margin-bottom: 15px;">Qualified lecturer needed to educate students in the university.</p>
+                <p class="job-desc">Qualified lecturer needed to educate students in the university.</p>
                 <div class="job-tags">
                     <span class="job-tag">Full Time</span>
                     <span class="job-tag">65,000 XAF</span>
@@ -365,13 +367,13 @@
             </div>
 
             <div class="job-card">
-                <img src="./images/nusery.jpg" alt="Nursery Teacher Image" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                <img src="./images/nusery.jpg" alt="Nursery Teacher Image" class="job-img">
                 <div class="job-card-header">
                     <div>
                         <h3 class="job-title">Teacher</h3>
                     </div>
                 </div>
-                <p style="color: var(--text-color); font-size: 14px; margin-bottom: 15px;">A qualified nursery school teacher needed to teach in a nursery school.</p>
+                <p class="job-desc">A qualified nursery school teacher needed to teach in a nursery school.</p>
                 <div class="job-tags">
                     <span class="job-tag">Full Time</span>
                     <span class="job-tag">65,000 XAF</span>

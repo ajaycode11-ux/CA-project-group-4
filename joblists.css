@@ -1,168 +1,70 @@
 /* Job Listing Page Specific Styles */
-/* Global variables, body, header, and footer styles are inherited from style.css */
 
-h2 {
-    text-align: center;
-    color: var(--text-heading);
-    margin-top: 40px;
-    font-size: 28px;
+/* 
+  Bringing the color palette from the index page here as requested.
+  This allows us to maintain the same variables natively in this file 
+  for the specific elements customized below. 
+*/
+:root {
+    --primary-color: #0f172a; 
+    --bg-color: #020617; 
+    --text-color: #94a3b8; 
+    --text-heading: #f8fafc; 
+    --button-color: #2563eb; 
+    --button-hover: #1d4ed8; 
+    --white: #ffffff;
+    /* Added a reusable variable for borders to replace the manual rgba inputs */
+    --border-color: rgba(255, 255, 255, 0.1);
 }
 
-.container {
-    display: flex;
-    justify-content: center;
-    margin-inline: 1.5rem;
-    padding-block: 5rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.card-container {
-    display: grid;
-    row-gap: 3.5rem;
-}
-
-.card-article {
-    position: relative;
-    overflow: hidden;
-    border-radius: 1.5rem;
-}
-
-.card-img {
-    width: 323px;
-    border-radius: 1.5rem;
-    object-fit: cover;
-}
-
-.card-data {
-    width: 250px;
-    height: auto;
-    color: var(--text-heading);
+/* 
+  Makes the joblists body color slightly different from the navbar. 
+  Navbar uses var(--bg-color), so here we use var(--primary-color) 
+*/
+.joblists-page-bg {
     background-color: var(--primary-color);
-    padding: 1.5rem 1.5rem;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-    border-radius: 1rem;
-    bottom: -11rem;
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin-inline: auto;
-    opacity: 0;
-    transition: opacity 1s 1s;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 120px;
+    padding-bottom: 80px;
 }
 
-.class-description {
-    display: block;
-    font-size: 16px;
-    margin-bottom: 0.5rem;
+/* Extracted from manual inline styles: Container for each category title */
+.category-container {
+    max-width: 1400px;
+    margin: 40px auto 0;
+    padding: 0 20px; /* added horizontal padding so it doesn't touch screen edges */
+}
+
+/* Removes top margin for the very first category so it aligns properly under the header */
+.category-container:first-of-type {
+    margin-top: 0;
+}
+
+/* Extracted from manual inline styles: Styling the category heading */
+.category-heading {
+    color: var(--text-heading);
+    font-size: 24px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border-color); /* Uses the new palette variable */
+    padding-bottom: 10px;
+}
+
+/* Extracted from manual inline styles: Standardizing job image display */
+.job-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Extracted from manual inline styles: Standardizing job description text */
+.job-desc {
     color: var(--text-color);
-    line-height: 1.4;
-}
-
-.card-data span {
     font-size: 14px;
-    color: #cbd5e1;
+    margin-bottom: 15px;
 }
 
-.card-tittle {
-    font-size: 22px;
-    font-weight: 600;
-    color: var(--button-color);
-    margin-bottom: 0.5rem;
-    text-transform: uppercase;
-}
-
-.card-button {
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--white);
-    background-color: var(--button-color);
-    padding: 8px 16px;
-    border-radius: 6px;
-    display: inline-block;
-    margin-top: 15px;
-    transition: background-color 0.3s ease;
-}
-
-.card-button:hover {
-    background-color: #1d4ed8;
-}
-
-.card-article:hover .card-data {
-    animation: show-data 1s forwards;
-    opacity: 1;
-    transition: opacity .3s;
-}
-
-.card-article:hover {
-    animation: remove-overflow 2s forwards;
-}
-
-.card-article:not(:hover) {
-    animation: show-overflow 2s forwards;
-}
-
-.card-article:not(:hover) .card-data {
-    animation: remove-data 1s forwards;
-}
-
-@keyframes show-data {
-    50% { transform: translateY(-12rem); }
-    100% { transform: translateY(-12rem); }
-}
-
-@keyframes remove-overflow {
-    to { overflow: initial; }
-}
-
-@keyframes remove-data {
-    0% { transform: translateY(-7rem); }
-    50% { transform: translateY(-10rem); }
-    100% { transform: translateY(0.5rem); }
-}
-
-@keyframes overflow {
-    0% {
-        overflow: initial;
-        pointer-events: none;
-    }
-    50% { overflow: hidden; }
-}
-
-/* Responsive Breakpoints */
-@media screen and (max-width: 340px) {
-    .container {
-        margin-inline: 1rem;
-    }
-    .card-data {
-        width: 220px;
-        padding: 1rem;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .card-container {
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 2rem;
-    }
-}
-
-@media screen and (min-width: 1120px) {
-    .container {
-        height: auto;
-    }
-    .card-container {
-        grid-template-columns: repeat(3, 1fr);
-        column-gap: 2.5rem;
-    }
-    .card-data {
-        width: 280px;
-        padding-inline: 2rem;
-    }
-    .card-img {
-        width: 350px;
-        height: auto;
-        border-radius: 1.5rem;
-    }
+/* Make sure job-cards stand out slightly against the --primary-color background */
+.job-card {
+    background-color: var(--bg-color); /* Ensure contrast */
 }
