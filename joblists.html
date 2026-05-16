@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job Listings | EASYFIND</title>
+    <!-- Removed joblists.css to use consistent styling from style.css for uniformity -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="joblists.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header navigation containing logo, links, and signup/login buttons -->
     <header class="header">
         <div class="logo-container">
-            <img src="https://ui-avatars.com/api/?name=Easy+Find&background=2563eb&color=fff&size=200&font-size=0.33" alt="Logo" class="logo-img">
+            <!-- Updated the logo image path to match index.html for consistency -->
+            <img src="images/logo.png" alt="Logo" class="logo-img">
             <h1 class="logo-text"><span class="slogan">EASY</span>FIND</h1>
         </div>
         
@@ -39,308 +40,359 @@
         </div>
     </header>
 
-    <section class="business-section" style="padding-top: 120px;">
-        <div class="business-intro">
-            <h2 class="business-title">Welcome to our EasyFind Job List Page</h2>
-            <p class="business-subtitle">Here you will find good job opportunities around Buea in all the categories made easy for you by EasyFind</p>
-        </div>
-        <h1 class="main-head" style="text-align: center; color: var(--text-heading); margin-bottom: 30px;">HERE ARE THE AVAILABLE JOBS</h1>
-
-<h2>CATHERING</h2>
-
-    <div class="container">
+    <!-- Switched from a custom business-section block to the standardized featured-jobs-section layout from style.css -->
+    <section class="featured-jobs-section" style="padding-top: 120px;">
         
-    <div class="card-container">
-        <article class="card-article">
-            <h2>CHEF</h2>
-            <img src=".//images/chef.jpg" alt="image" height="350px" class="card-img">
+        <!-- Standardized Section Header -->
+        <div class="section-header">
+            <h2 class="section-title">Available Jobs by Category</h2>
+            <p class="section-subtitle">Here you will find great job opportunities around Buea in various categories made easy for you by EasyFind.</p>
+        </div>
 
-            <div class="card-data">
-                <h2 class="card-tittle">CHEF</h2>
-                <span class="class-description">In need of a qualified Chef who Prepares and cooks meals, plans menus, and ensures food quality.</span><br>
-                <span>Location : Buea</span><br>
-                <span>Type : Full Time</span><br>
-                <span>Salary : 100000XAF</span><br>
-                
-                <a href="" class="card-button">Read more</a>
+        <!-- CATEGORY: CATERING -->
+        <div style="max-width: 1400px; margin: 0 auto;">
+            <!-- Added category headings to neatly separate job grids -->
+            <h3 style="color: var(--text-heading); font-size: 24px; margin-bottom: 20px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 10px;">Catering</h3>
+        </div>
+        
+        <!-- Utilizing the uniform jobs-grid and job-card classes -->
+        <div class="jobs-grid">
+            <div class="job-card">
+                <img src="./images/chef.jpg" alt="Chef Image" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                <div class="job-card-header">
+                    <div>
+                        <h3 class="job-title">Chef</h3>
+                    </div>
+                </div>
+                <p style="color: var(--text-color); font-size: 14px; margin-bottom: 15px;">In need of a qualified Chef who prepares and cooks meals, plans menus, and ensures food quality.</p>
+                <div class="job-tags">
+                    <span class="job-tag">Full Time</span>
+                    <span class="job-tag">100,000 XAF</span>
+                </div>
+                <p class="job-location">Buea</p>
+                <a href="job-deatails.html" class="btn btn-apply">Read more</a>
             </div>
-        </article>
-        <article class="card-article">
-            <h2>CATERER ASSISTANT</h2>
-            <img src=".//images/OIP (12).webp" alt="image" height="350px" class="card-img">
 
-            <div class="card-data">
-                <h2 class="card-tittle">CATERER ASSISTANT</h2>
-                <span class="class-description">Helps with food preparation and keeps the kitchen clean and organized.</span><br>
-                <span>Location : Buea</span><br>
-                <span>Type : Part Time</span><br>
-                <span>Salary : 40000XAF</span><br>
-                
-                <a href="" class="card-button">Read more</a>
+            <div class="job-card">
+                <img src="./images/OIP (12).webp" alt="Caterer Assistant Image" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                <div class="job-card-header">
+                    <div>
+                        <h3 class="job-title">Caterer Assistant</h3>
+                    </div>
+                </div>
+                <p style="color: var(--text-color); font-size: 14px; margin-bottom: 15px;">Helps with food preparation and keeps the kitchen clean and organized.</p>
+                <div class="job-tags">
+                    <span class="job-tag">Part Time</span>
+                    <span class="job-tag">40,000 XAF</span>
+                </div>
+                <p class="job-location">Buea</p>
+                <a href="job-deatails.html" class="btn btn-apply">Read more</a>
             </div>
-        </article>
 
-        <article class="card-article">
-            <h2>BAKER</h2>
-            <img src=".//images/Baker.jpg" alt="image" height="350px" class="card-img">
-
-            <div class="card-data">
-                <h2 class="card-tittle">BAKER</h2>
-                <span class="class-description">Aqualified Baker needed who can bake Bread, cakes, pasteries and many more</span><br>
-                <span>Location : Buea</span><br>
-                <span>Type : Part Time</span><br>
-                <span>Salary : 90000XAF</span><br>
-                <a href="" class="card-button">Read more</a>
+            <div class="job-card">
+                <img src="./images/Baker.jpg" alt="Baker Image" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                <div class="job-card-header">
+                    <div>
+                        <h3 class="job-title">Baker</h3>
+                    </div>
+                </div>
+                <p style="color: var(--text-color); font-size: 14px; margin-bottom: 15px;">A qualified Baker needed who can bake bread, cakes, pastries, and many more.</p>
+                <div class="job-tags">
+                    <span class="job-tag">Part Time</span>
+                    <span class="job-tag">90,000 XAF</span>
+                </div>
+                <p class="job-location">Buea</p>
+                <a href="job-deatails.html" class="btn btn-apply">Read more</a>
             </div>
-        </article>
-    </div>
-  </div>
+        </div>
 
-  <h2>COSMETICS</h2>
-
-    <div class="container">
-    <div class="card-container">
-        <article class="card-article">
-            <h2>BEAUTICIAN</h2>
-            <img src=".//images/OIP (12).webp" alt="image" height="350px" class="card-img">
-
-            <div class="card-data">
-                <h2 class="card-tittle">Beatician</h2>
-                <span class="class-description">A qualified beatician is needed to provide beuty services</span><br>
-                <span>Location : Buea</span><br>
-                <span>Type : Part Time</span><br>
-                <span>Salary : 60000XAF</span><br>
-                <a href="" class="card-button">Read more</a>
+        <!-- CATEGORY: COSMETICS -->
+        <div style="max-width: 1400px; margin: 40px auto 0;">
+            <h3 style="color: var(--text-heading); font-size: 24px; margin-bottom: 20px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 10px;">Cosmetics</h3>
+        </div>
+        
+        <div class="jobs-grid">
+            <div class="job-card">
+                <img src="./images/OIP (12).webp" alt="Beautician Image" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                <div class="job-card-header">
+                    <div>
+                        <h3 class="job-title">Beautician</h3>
+                    </div>
+                </div>
+                <p style="color: var(--text-color); font-size: 14px; margin-bottom: 15px;">A qualified beautician is needed to provide beauty services.</p>
+                <div class="job-tags">
+                    <span class="job-tag">Part Time</span>
+                    <span class="job-tag">60,000 XAF</span>
+                </div>
+                <p class="job-location">Buea</p>
+                <a href="job-deatails.html" class="btn btn-apply">Read more</a>
             </div>
-        </article>
-        <article class="card-article">
-            <h2>SPA THERAPIST</h2>
-            <img src=".//images/spa thera.jpg" alt="image" height="350px" class="card-img">
 
-            <div class="card-data">
-                <h2 class="card-tittle">Spa Therapist</h2>
-                <span class="class-description">In need of qualified spa therapist to provide servicesto costumer in a spa</span><br>
-                <span>Location : Buea</span><br>
-                <span>Type : Part Time</span><br>
-                <span>Salary : 50000XAF</span><br>
-                <a href="" class="card-button">Read more</a>
+            <div class="job-card">
+                <img src="./images/spa thera.jpg" alt="Spa Therapist Image" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                <div class="job-card-header">
+                    <div>
+                        <h3 class="job-title">Spa Therapist</h3>
+                    </div>
+                </div>
+                <p style="color: var(--text-color); font-size: 14px; margin-bottom: 15px;">In need of a qualified spa therapist to provide services to customers in a spa.</p>
+                <div class="job-tags">
+                    <span class="job-tag">Part Time</span>
+                    <span class="job-tag">50,000 XAF</span>
+                </div>
+                <p class="job-location">Buea</p>
+                <a href="job-deatails.html" class="btn btn-apply">Read more</a>
             </div>
-        </article>
 
-        <article class="card-article">
-            <h2>NAIL TECHNICIAN</h2>
-            <img src=".//images/Nail tech.jpg" alt="image" height="350px" class="card-img">
-
-            <div class="card-data">
-                <h2 class="card-tittle">Nail Technician</h2>
-                <span class="class-description">A qualified nail technician needed to provide nail sevicesto costume in a salon</span><br>
-                <span>Location : Buea</span><br>
-                <span>Type : Part Time</span><br>
-                <span>Salary : 50000XAF</span><br>
-                <a href="" class="card-button">Read more</a>
+            <div class="job-card">
+                <img src="./images/Nail tech.jpg" alt="Nail Technician Image" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                <div class="job-card-header">
+                    <div>
+                        <h3 class="job-title">Nail Technician</h3>
+                    </div>
+                </div>
+                <p style="color: var(--text-color); font-size: 14px; margin-bottom: 15px;">A qualified nail technician needed to provide nail services to customers in a salon.</p>
+                <div class="job-tags">
+                    <span class="job-tag">Part Time</span>
+                    <span class="job-tag">50,000 XAF</span>
+                </div>
+                <p class="job-location">Buea</p>
+                <a href="job-deatails.html" class="btn btn-apply">Read more</a>
             </div>
-        </article>
-    </div>
-  </div>
-  <h2>DOMESTIC WORKER</h2>
+        </div>
 
-    <div class="container">
-    <div class="card-container">
-        <article class="card-article">
-            <h2>House keeper</h2>
-            <img src=".//images/CLEANING.jpg" alt="image" height="350px" class="card-img">
-
-            <div class="card-data">
-                <h2 class="card-tittle">House Keeper</h2>
-                <span class="class-description">A qualified housekeeper needed to provide cleaning sevices</span><br>
-                <span>Location : Buea</span><br>
-                <span>Type : Part Time</span><br>
-                <span>Salary : 40000XAF</span><br>
-                <a href="" class="card-button">Read more</a>
+        <!-- CATEGORY: DOMESTIC WORKER -->
+        <div style="max-width: 1400px; margin: 40px auto 0;">
+            <h3 style="color: var(--text-heading); font-size: 24px; margin-bottom: 20px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 10px;">Domestic Worker</h3>
+        </div>
+        
+        <div class="jobs-grid">
+            <div class="job-card">
+                <img src="./images/CLEANING.jpg" alt="House Keeper Image" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                <div class="job-card-header">
+                    <div>
+                        <h3 class="job-title">House Keeper</h3>
+                    </div>
+                </div>
+                <p style="color: var(--text-color); font-size: 14px; margin-bottom: 15px;">A qualified housekeeper needed to provide cleaning services.</p>
+                <div class="job-tags">
+                    <span class="job-tag">Part Time</span>
+                    <span class="job-tag">40,000 XAF</span>
+                </div>
+                <p class="job-location">Buea</p>
+                <a href="job-deatails.html" class="btn btn-apply">Read more</a>
             </div>
-        </article>
-        <article class="card-article">
-            <h2>NANNY</h2>
-            <img src=".//images/nanny.jpg" alt="image" height="350px" class="card-img">
 
-            <div class="card-data">
-                <h2 class="card-tittle">NANNY</h2>
-                <span class="class-description">A qualified Nanny needed to provide Nanny services</span><br>
-                <span>Location : Buea</span><br>
-                <span>Type : Part Time</span><br>
-                <span>Salary : 40000XAF</span><br>
-                <a href="" class="card-button">Read more</a>
+            <div class="job-card">
+                <img src="./images/nanny.jpg" alt="Nanny Image" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                <div class="job-card-header">
+                    <div>
+                        <h3 class="job-title">Nanny</h3>
+                    </div>
+                </div>
+                <p style="color: var(--text-color); font-size: 14px; margin-bottom: 15px;">A qualified Nanny needed to provide nanny services.</p>
+                <div class="job-tags">
+                    <span class="job-tag">Part Time</span>
+                    <span class="job-tag">40,000 XAF</span>
+                </div>
+                <p class="job-location">Buea</p>
+                <a href="job-deatails.html" class="btn btn-apply">Read more</a>
             </div>
-        </article>
 
-        <article class="card-article">
-            <h2>GARDENER</h2>
-            <img src=".//images/gardener.jpg" alt="image" height="350px" class="card-img">
-            
-            <div class="card-data">
-                <h2 class="card-tittle">GARDENER</h2>
-                <span class="class-description">A qualified gardener needed to provide gardening and landscaping services</span><br>
-                <span>Location : Buea</span><br>
-                <span>Type : Part Time</span><br>
-                <span>Salary : 45000XAF</span><br>
-                <a href="" class="card-button">Read more</a>
+            <div class="job-card">
+                <img src="./images/gardener.jpg" alt="Gardener Image" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                <div class="job-card-header">
+                    <div>
+                        <h3 class="job-title">Gardener</h3>
+                    </div>
+                </div>
+                <p style="color: var(--text-color); font-size: 14px; margin-bottom: 15px;">A qualified gardener needed to provide gardening and landscaping services.</p>
+                <div class="job-tags">
+                    <span class="job-tag">Part Time</span>
+                    <span class="job-tag">45,000 XAF</span>
+                </div>
+                <p class="job-location">Buea</p>
+                <a href="job-deatails.html" class="btn btn-apply">Read more</a>
             </div>
-        </article>
-    </div>
-  </div>
+        </div>
 
-  <h2>CONSTRUCTION</h2>
-
-    <div class="container">
-    <div class="card-container">
-        <article class="card-article">
-            <h2>BUILDER</h2>
-            <img src=".//images/builder.jpg" alt="image" height="350px" class="card-img">
-
-            <div class="card-data">
-                <h2 class="card-tittle">BUILDER</h2>
-                <span class="class-description">A qualified builder needed to construct and maintaining buildings</span><br>
-                <span>Location : Buea</span><br>
-                <span>Type : Part Time</span><br>
-                <span>Salary : NEGOTIATION</span><br>
-                <a href="" class="card-button">Read more</a>
+        <!-- CATEGORY: CONSTRUCTION -->
+        <div style="max-width: 1400px; margin: 40px auto 0;">
+            <h3 style="color: var(--text-heading); font-size: 24px; margin-bottom: 20px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 10px;">Construction</h3>
+        </div>
+        
+        <div class="jobs-grid">
+            <div class="job-card">
+                <img src="./images/builder.jpg" alt="Builder Image" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                <div class="job-card-header">
+                    <div>
+                        <h3 class="job-title">Builder</h3>
+                    </div>
+                </div>
+                <p style="color: var(--text-color); font-size: 14px; margin-bottom: 15px;">A qualified builder needed to construct and maintain buildings.</p>
+                <div class="job-tags">
+                    <span class="job-tag">Part Time</span>
+                    <span class="job-tag">Negotiable</span>
+                </div>
+                <p class="job-location">Buea</p>
+                <a href="job-deatails.html" class="btn btn-apply">Read more</a>
             </div>
-        </article>
-        <article class="card-article">
-            <h2>TILING</h2>
-            <img src=".//images/Tiler.jpg" alt="image" height="350px" class="card-img">
 
-            <div class="card-data">
-                <h2 class="card-tittle">TILING</h2>
-                <span class="class-description">Qaulified tiler needed to construct and maintain buildings and other structures.</span>
-                <span>Location : Buea</span><br>
-                <span>Type : Part Time</span><br>
-                <span>Salary : NEGOTIATION</span><br>
-                <a href="" class="card-button">Read more</a>
+            <div class="job-card">
+                <img src="./images/Tiler.jpg" alt="Tiling Image" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                <div class="job-card-header">
+                    <div>
+                        <h3 class="job-title">Tiling</h3>
+                    </div>
+                </div>
+                <p style="color: var(--text-color); font-size: 14px; margin-bottom: 15px;">Qualified tiler needed to construct and maintain buildings and other structures.</p>
+                <div class="job-tags">
+                    <span class="job-tag">Part Time</span>
+                    <span class="job-tag">Negotiable</span>
+                </div>
+                <p class="job-location">Buea</p>
+                <a href="job-deatails.html" class="btn btn-apply">Read more</a>
             </div>
-        </article>
 
-        <article class="card-article">
-            <h2>CARPENTER</h2>
-            <img src=".//images/carpenter.jpg" alt="image" height="350px" class="card-img">
-
-            <div class="card-data">
-                <h2 class="card-tittle">CARPENTER</h2>
-                <span class="class-description">A qualified Carpenter needed for roofing and other woodwork services</span><br>
-                <span>Location : Buea</span><br>
-                <span>Type : Part Time</span><br>
-                <span>Salary : NEGOTIATION</span><br>
-                <a href="" class="card-button">Read more</a>
+            <div class="job-card">
+                <img src="./images/carpenter.jpg" alt="Carpenter Image" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                <div class="job-card-header">
+                    <div>
+                        <h3 class="job-title">Carpenter</h3>
+                    </div>
+                </div>
+                <p style="color: var(--text-color); font-size: 14px; margin-bottom: 15px;">A qualified Carpenter needed for roofing and other woodwork services.</p>
+                <div class="job-tags">
+                    <span class="job-tag">Part Time</span>
+                    <span class="job-tag">Negotiable</span>
+                </div>
+                <p class="job-location">Buea</p>
+                <a href="job-deatails.html" class="btn btn-apply">Read more</a>
             </div>
-        </article>
-    </div>
-  </div>
+        </div>
 
-  <h2>TEXTILE</h2>
-
-    <div class="container">
-    <div class="card-container">
-        <article class="card-article">
-            <h2>TAILOR</h2>
-            <img src=".//images/tailor.jpg" alt="image" height="350px" class="card-img">
-
-            <div class="card-data">
-                <h2 class="card-tittle">TAILOR</h2>
-                <span class="class-description">A qualified tailor needed to create clothing for costumers</span><br>
-                <span>Location : Buea</span><br>
-                <span>Type : Full Time</span><br>
-                <span>Salary : 65000XAF</span><br>
-                <a href="" class="card-button">Read more</a>
+        <!-- CATEGORY: TEXTILE -->
+        <div style="max-width: 1400px; margin: 40px auto 0;">
+            <h3 style="color: var(--text-heading); font-size: 24px; margin-bottom: 20px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 10px;">Textile</h3>
+        </div>
+        
+        <div class="jobs-grid">
+            <div class="job-card">
+                <img src="./images/tailor.jpg" alt="Tailor Image" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                <div class="job-card-header">
+                    <div>
+                        <h3 class="job-title">Tailor</h3>
+                    </div>
+                </div>
+                <p style="color: var(--text-color); font-size: 14px; margin-bottom: 15px;">A qualified tailor needed to create clothing for customers.</p>
+                <div class="job-tags">
+                    <span class="job-tag">Full Time</span>
+                    <span class="job-tag">65,000 XAF</span>
+                </div>
+                <p class="job-location">Buea</p>
+                <a href="job-deatails.html" class="btn btn-apply">Read more</a>
             </div>
-        </article>
-        <article class="card-article">
-            <h2>SEAMTRESS</h2>
-            <img src=".//images/seamtress.jpg" alt="image" height="350px" class="card-img">
 
-            <div class="card-data">
-                <h2 class="card-tittle">SEAMTRESS</h2>
-                <span class="class-description">Qualified seamtress needed to create and alter clothing for costumers</span><br>
-                <span>Location : Buea</span><br>
-                <span>Type : Full Time</span><br>
-                <span>Salary : 65000XAF</span><br>
-                <a href="" class="card-button">Read more</a>
+            <div class="job-card">
+                <img src="./images/seamtress.jpg" alt="Seamstress Image" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                <div class="job-card-header">
+                    <div>
+                        <h3 class="job-title">Seamstress</h3>
+                    </div>
+                </div>
+                <p style="color: var(--text-color); font-size: 14px; margin-bottom: 15px;">Qualified seamstress needed to create and alter clothing for customers.</p>
+                <div class="job-tags">
+                    <span class="job-tag">Full Time</span>
+                    <span class="job-tag">65,000 XAF</span>
+                </div>
+                <p class="job-location">Buea</p>
+                <a href="job-deatails.html" class="btn btn-apply">Read more</a>
             </div>
-        </article>
 
-        <article class="card-article">
-            <h2>Clothing Assitance</h2>
-            <img src=".//images/Assistant.jpg" alt="image" height="350px" class="card-img">
-
-            <div class="card-data">
-                <h2 class="card-tittle">Clothing Assitance</h2>
-                <span class="class-description">A qualified clothing assistant needed to assist in clothing cretion</span><br>
-                <span>Location : Buea</span><br>
-                <span>Type : Full Time</span><br>
-                <span>Salary : 65000XAF</span><br>
-                <a href="" class="card-button">Read more</a>
+            <div class="job-card">
+                <img src="./images/Assistant.jpg" alt="Clothing Assistant Image" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                <div class="job-card-header">
+                    <div>
+                        <h3 class="job-title">Clothing Assistance</h3>
+                    </div>
+                </div>
+                <p style="color: var(--text-color); font-size: 14px; margin-bottom: 15px;">A qualified clothing assistant needed to assist in clothing creation.</p>
+                <div class="job-tags">
+                    <span class="job-tag">Full Time</span>
+                    <span class="job-tag">65,000 XAF</span>
+                </div>
+                <p class="job-location">Buea</p>
+                <a href="job-deatails.html" class="btn btn-apply">Read more</a>
             </div>
-        </article>
-    </div>
-  </div>
+        </div>
 
-  <h2>TEACHING</h2>
-
-    <div class="container">
-    <div class="card-container">
-        <article class="card-article">
-            <h2>Teacher</h2>
-            <img src=".//images/teacher s.jpg" alt="image" height="350px" class="card-img">
-
-            <div class="card-data">
-                <h2 class="card-tittle">Teacher</h2>
-                <span class="class-description">A qualified teacher needed to teach and educate students in a primary school</span><br>
-                <span>Location : Buea</span><br>
-                <span>Type : Full Time</span><br>
-                <span>Salary : 65000XAF</span><br>
-                <a href="" class="card-button">Read more</a>
+        <!-- CATEGORY: TEACHING -->
+        <div style="max-width: 1400px; margin: 40px auto 0;">
+            <h3 style="color: var(--text-heading); font-size: 24px; margin-bottom: 20px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 10px;">Teaching</h3>
+        </div>
+        
+        <div class="jobs-grid">
+            <div class="job-card">
+                <img src="./images/teacher s.jpg" alt="Teacher Image" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                <div class="job-card-header">
+                    <div>
+                        <h3 class="job-title">Teacher</h3>
+                    </div>
+                </div>
+                <p style="color: var(--text-color); font-size: 14px; margin-bottom: 15px;">A qualified teacher needed to teach and educate students in a primary school.</p>
+                <div class="job-tags">
+                    <span class="job-tag">Full Time</span>
+                    <span class="job-tag">65,000 XAF</span>
+                </div>
+                <p class="job-location">Buea</p>
+                <a href="job-deatails.html" class="btn btn-apply">Read more</a>
             </div>
-        </article>
-        <article class="card-article">
-            <h2>LECTURER</h2>
-            <img src=".//images/lecture.jpg" alt="image" height="350px" class="card-img">
 
-            <div class="card-data">
-                <h2 class="card-tittle">LECTURER</h2>
-                <span class="class-description">Qualified lecturer needed to educate students in the university.</span><br>
-                <span>Location : Buea</span><br>
-                <span>Type : Full Time</span><br>
-                <span>Salary : 65000XAF</span><br>
-                <a href="" class="card-button">Read more</a>
+            <div class="job-card">
+                <img src="./images/lecture.jpg" alt="Lecturer Image" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                <div class="job-card-header">
+                    <div>
+                        <h3 class="job-title">Lecturer</h3>
+                    </div>
+                </div>
+                <p style="color: var(--text-color); font-size: 14px; margin-bottom: 15px;">Qualified lecturer needed to educate students in the university.</p>
+                <div class="job-tags">
+                    <span class="job-tag">Full Time</span>
+                    <span class="job-tag">65,000 XAF</span>
+                </div>
+                <p class="job-location">Buea</p>
+                <a href="job-deatails.html" class="btn btn-apply">Read more</a>
             </div>
-        </article>
 
-        <article class="card-article">
-            <h2>TEACHER</h2>
-            <img src=".//images/nusery.jpg" alt="image" height="350px" class="card-img">
-
-            <div class="card-data">
-                <h2 class="card-tittle">TEACHER</h2>
-                <span class="class-description">A qualified nursery school teacher needed to teach in a nursery school</span>
-                <span>Location : Buea</span><br>
-                <span>Type : Full Time</span><br>
-                <span>Salary : 65000XAF</span><br>
-                <a href="" class="card-button">Read more</a>
+            <div class="job-card">
+                <img src="./images/nusery.jpg" alt="Nursery Teacher Image" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                <div class="job-card-header">
+                    <div>
+                        <h3 class="job-title">Teacher</h3>
+                    </div>
+                </div>
+                <p style="color: var(--text-color); font-size: 14px; margin-bottom: 15px;">A qualified nursery school teacher needed to teach in a nursery school.</p>
+                <div class="job-tags">
+                    <span class="job-tag">Full Time</span>
+                    <span class="job-tag">65,000 XAF</span>
+                </div>
+                <p class="job-location">Buea</p>
+                <a href="job-deatails.html" class="btn btn-apply">Read more</a>
             </div>
-        </article>
-    </div>
-  </div>
+        </div>
+    </section>
+
+    <!-- Footer mirroring the professional footer from index.html -->
     <footer class="footer">
         <div class="footer-container">
-            <!-- Column 1: Company Branding and Description -->
             <div class="footer-col">
                 <div class="logo-container">
-                    <img src="https://ui-avatars.com/api/?name=Easy+Find&background=2563eb&color=fff&size=200&font-size=0.33" alt="Logo" class="logo-img">
+                    <img src="images/logo.png" alt="Logo" class="logo-img">
                     <h2 class="logo-text"><span class="slogan">EASY</span>FIND</h2>
                 </div>
                 <p class="footer-desc">Empowering individuals and businesses to connect effortlessly. Your go-to platform for finding the right talent and opportunities.</p>
             </div>
             
-            <!-- Column 2: Quick Navigation Links -->
             <div class="footer-col">
                 <h3 class="footer-heading">Quick Links</h3>
                 <ul class="footer-links">
@@ -351,7 +403,6 @@
                 </ul>
             </div>
             
-            <!-- Column 3: Support & Policies -->
             <div class="footer-col">
                 <h3 class="footer-heading">Support</h3>
                 <ul class="footer-links">
@@ -362,10 +413,8 @@
                 </ul>
             </div>
             
-            <!-- Column 4: Social Media & Newsletter Subscription -->
             <div class="footer-col">
                 <h3 class="footer-heading">Connect With Us</h3>
-                <!-- Social Media Icons -->
                 <div class="social-links">
                     <a href="#" class="social-icon">FB</a>
                     <a href="#" class="social-icon">TW</a>
@@ -373,7 +422,6 @@
                     <a href="#" class="social-icon">IG</a>
                 </div>
                 
-                <!-- Newsletter Form -->
                 <p class="newsletter-text">Subscribe to our newsletter</p>
                 <div class="newsletter-form">
                     <input type="email" placeholder="Email address" class="newsletter-input">
@@ -382,7 +430,6 @@
             </div>
         </div>
         
-        <!-- Bottom Section: Copyright Notice -->
         <div class="footer-bottom">
             <p>&copy; 2026 EasyFind. All rights reserved.</p>
         </div>
