@@ -68,3 +68,26 @@
 .job-card {
     background-color: var(--bg-color); /* Ensure contrast */
 }
+
+/* Mobile Responsiveness for Job Lists */
+@media (max-width: 768px) {
+    .joblists-page-bg {
+        padding-top: 120px;
+        padding-bottom: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .joblists-page-bg {
+        padding-top: 100px;
+    }
+    
+    .category-container {
+        padding: 0 10px;
+        margin-top: 30px;
+    }
+    
+    .category-heading {
+        font-size: 20px;
+    }
+}

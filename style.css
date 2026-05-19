@@ -522,7 +522,8 @@ body {
 
 .jobs-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    /* [MODIFIED] Updated minmax to min(100%, 300px) to prevent horizontal scrolling on screens smaller than 320px */
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
     gap: 30px;
     max-width: 1400px;
     margin: 0 auto 40px;
@@ -772,5 +773,16 @@ body {
     
     .section-title {
         font-size: 28px;
+    }
+    
+    /* [MODIFIED] Reduced section padding on mobile to maximize screen space */
+    .how-it-works-section,
+    .featured-jobs-section,
+    .cta-section {
+        padding: 40px 15px;
+    }
+    
+    .footer {
+        padding: 40px 20px 20px;
     }
 }

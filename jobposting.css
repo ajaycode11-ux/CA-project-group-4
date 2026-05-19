@@ -149,4 +149,28 @@
     .jobposting-section {
         padding: 5rem 1rem 3rem;
     }
+
+    /* [MODIFIED] Scaled down massive page titles for tablet and mobile */
+    .page-title {
+        font-size: 2.2rem;
+    }
+
+    .page-subtitle {
+        font-size: 1.1rem;
+    }
+}
+
+/* [MODIFIED] Further reduced padding on very small phones so form inputs have room */
+@media (max-width: 480px) {
+    .jobpost-form {
+        padding: 1.25rem 1rem;
+    }
+    
+    .jobpost-header {
+        padding: 1.5rem 1rem;
+    }
+    
+    .jobpost-header h2 {
+        font-size: 1.5rem;
+    }
 }

@@ -179,7 +179,7 @@ section h2 {
 @media (min-width: 768px) {
     section {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* Automatically wraps and fits columns */
+        grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); /* Automatically wraps and fits columns safely */
         gap: 2rem;
     }
     /* Ensure the h2 title stretches across all grid columns */
