@@ -23,8 +23,8 @@
 */
 .joblists-page-bg {
     background-color: var(--primary-color);
-    padding-top: 120px;
-    padding-bottom: 80px;
+    padding-top: 170px;
+    padding-bottom: 60px;
 }
 
 /* Extracted from manual inline styles: Container for each category title */
