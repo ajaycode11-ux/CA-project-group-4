@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box; /* Ensures padding and borders are included in element's total width and height */
+    overflow-x: hidden; /* Prevents horizontal scroll from any overflow issues */
+}
 /* Job Posting Page Specific Styles */
 .jobposting-section {
     padding: 6rem 2rem 4rem;

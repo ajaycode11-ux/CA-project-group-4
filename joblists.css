@@ -1,5 +1,10 @@
 /* Job Listing Page Specific Styles */
-
+* {
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box; /* Ensures padding and borders are included in element's total width and height */
+    overflow-x: hidden; /* Prevents horizontal scroll from any overflow issues */
+}
 /* 
   Bringing the color palette from the index page here as requested.
   This allows us to maintain the same variables natively in this file 
