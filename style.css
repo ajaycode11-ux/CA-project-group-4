@@ -2,6 +2,7 @@
 :root {
     --primary-color: #0f172a; /* Elegant deep slate for alternating sections */
     --bg-color: #020617; /* Very dark modern background */
+    --bg-color2: rgba(255, 255, 255, 0.05); /* Semi-transparent version of the background color */
     --text-color: #94a3b8; /* Muted professional light text */
     --text-heading: #f8fafc; /* Crisp white for headings and emphasis */
     --button-color: #2563eb; /* Trustworthy professional blue */
@@ -239,7 +240,7 @@ body {
 
 /* BUSINESS SECTION */
 .business-section {
-    background-color: var(--bg-color);
+    background-color: var(--bg-color); /* Use the semi-transparent background for a subtle contrast */
     color: var(--text-color);
     padding: 1rem ;
 }
@@ -515,7 +516,7 @@ body {
 
 /* Featured Jobs Section */
 .featured-jobs-section {
-    background-color: var(--bg-color);
+    background-color: var(--bg-color2);
     padding: 80px 20px;
 }
 
@@ -618,7 +619,7 @@ body {
 
 /* CTA Section */
 .cta-section {
-    background-color: var(--button-color);
+    background-color: var(--primary-color);
     padding: 80px 20px;
     text-align: center;
 }
